@@ -56,7 +56,7 @@ const Homepage = () => {
         <>
         
                 <div className='m-4 flex justify-between items-center flex-wrap '>
-                    <h1 className='text-[30px] font-[400] tracking-widest  mb-4'>FEATURED</h1>
+                    <h1 className='font-sans text-[30px] font-[400] tracking-widest  mb-4'>FEATURED</h1>
                     <h1 className='text-[30px] font-[400] tracking-widest  mb-4'>VIEW ALL HOMES</h1>
                     <div className='flex w-25 justify-between'>
                         <img className='cursor-pointer m-5' src="/static/LeftIcon.png" alt="" onClick={handleLeftSlider} />
