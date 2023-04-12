@@ -75,33 +75,34 @@ const Card = ({ data }) => {
                     <img src="/static/share.png" alt="" />
                     <img src="/static/heart.png" alt="" />
                 </div>
-                <div className='my-7 flex justify-between text-white row-start-3 col-span-full items-center text-3xl'>
+                <div className='flex relative top-12 justify-between text-white  col-span-full items-center text-3xl'>
                     <AiFillCaretLeft className='cursor-pointer' onClick={slideLeft}/>
                     <AiFillCaretRight className='cursor-pointer' onClick={slideRight}/>
                 </div>
             
-                <div className='z-10 col-span-full flex flex-wrap pt-20 text-sm grid-cols-4 row-start-8 flex w-full'>
-                    <h1 className='col-span-1 flex items-center justify-center gap-4 mr-1 font-bold text-[12px]'>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
+                <div className='z-10 col-span-full flex flex-wrap pt-20 text-sm grid-cols-4 row-start-8 flex w-full relative top-14'>
+                    <h1 className='col-span-1 p-2 flex items-center justify-center font-bold text-[12px]' style={{wordSpacing:'8px'}}>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
                         
                 </div>
-                  <div className='  mt-5 text-center items-center w-full'>
+                  <div className=' z-10  row-start-5 col-span-full flex items-center justify-center font-bold  text-[15px] relative top-12'>
                   <h1 >United Kingdom</h1>
                   </div>
-                  <p className='z-10 mt-5 row-start-7  col-span-full flex items-center justify-center'>
-                    #ZM786123456
-                </p>
-                <div className='z-10 row-start-6 col-span-full grid grid-cols-3 flex justify-center mt-3'>
-                    <div class="col-span-1 flex justify-center items-center">
+                
+                <div className='relative top-8 col-span-full grid grid-cols-3 flex   justify-center mt-3'>
+                    <div class="col-span-1 flex justify-center items-center pr-10">
                         <img src="/static/zimologo.png" alt='' />
                     </div>
-                    <p className='col-span-1 flex items-center justify-center'>£5,000,000 GBP</p>
-                    <div class="col-span-1 flex justify-center items-center">
+                    <p className='col-span-1 flex items-center justify-center   '>£5,000,000 GBP</p>
+                    <div class="col-span-1 flex justify-center items-center pl-10">
                         <img src="/static/bottomlogo.png" alt='' />
                     </div>
+                   
                 </div>
-                <p className='z-10 mt-5 row-start-7  col-span-full flex items-center justify-center'>
+                <div  className='z-10 text-[10px] col-span-full   flex items-center justify-center relative top-5'>
+                   <p>
                     #ZM786123456
                 </p>
+               </div>
             </div>
             <div className=' px-5 py-2 bg-black text-white rounded-2xl  flex items-center justify-between cursor-pointer'>
                 <div>
