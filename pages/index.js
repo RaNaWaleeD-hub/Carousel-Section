@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-
 const Homepage = () => {
     const [cardItem, setcardItem] = useState(data.listing);
     const sliderRef = useRef(null);

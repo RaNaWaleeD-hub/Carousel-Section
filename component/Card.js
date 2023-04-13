@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTimer } from "react-timer-hook";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { AiFillCaretLeft, AiFillCaretRight,AiOutlineHeart,AiFillHeart } from 'react-icons/ai';
 
@@ -43,39 +43,14 @@ const Card = ({ data }) => {
 
     const expiryTimestamp = new Date(data.expiry).getTime();
     const { seconds, minutes, hours,days } = useTimer({ expiryTimestamp });
-
-   
-    // function calculateSecondsToDate(targetDate) {
-    //   const now = new Date();
-    //   const targetTime = targetDate.getTime();
-    //   const currentTime = now.getTime();
-    //   const secondsDifference = Math.floor((targetTime - currentTime) / 1000);
-    //   return secondsDifference;
-    // }
     
-    // const time = calculateSecondsToDate(targetDate);
-    
-    // const {
-    //   seconds,
-    //   minutes,
-    //   hours,
-    //   days,
-    // } = useTimer({ time });
-    
-    // const second = Math.floor(seconds);
     
 
-   
 
-
-
-
-   
-   
       return (
         <>
         <div className='flex flex-col'>
-            <div className=' mb-3 text-white card h-[400px] grid  grid-cols-4 rounded-xl space-between p-4 ' style={{ backgroundImage: `url(${getImages[currentIndex]})` }}>
+            <div className=' mb-3 text-white card h-[430px]  grid  grid-cols-4 rounded-xl space-between p-4 ' style={{ backgroundImage: `url(${getImages[currentIndex]})` }}>
                 <div className='z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col items-center'>
                     <div className='text-5xl'>{days}</div>
                     <div className='text-xs'>DAYS</div>
@@ -110,7 +85,7 @@ const Card = ({ data }) => {
                 </div>
             
                 <div className='z-10 col-span-full flex flex-wrap pt-20 text-sm grid-cols-4 row-start-8 flex w-full relative '>
-                    <h1 className='col-span-1 p-2 flex items-center justify-center  text-[12px]' style={{wordSpacing:'8px'}}>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
+                    <h1 className='col-span-1 p-2 flex items-center justify-center  text-[12px]' style={{wordSpacing:'6px'}}>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
                         
                 </div>
                   <div className=' z-10  row-start-5 col-span-full flex items-center justify-center  text-[14px] relative top-3'>
@@ -139,11 +114,12 @@ const Card = ({ data }) => {
                                             fontSize: '35px',
                                             fill: 'white',
                                         },
-                                        path: { stroke: 'white' },
-                                        trail: { fill: 'black' } // Set trail color to black
+                                        pathColor: `rgba(62, 152, 199, ${data.completion_percentage / 100})`,
+                                       
+                                 
                                     }}
                                     text={`${data.completion_percentage}%`}
-                                    percentage={data.completion_percentage}
+                                   value={data.completion_percentage}
                                 />
                             </div>
                </div>
