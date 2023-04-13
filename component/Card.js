@@ -85,7 +85,7 @@ const Card = ({ data }) => {
                 </div>
             
                 <div className='z-10 col-span-full flex flex-wrap pt-20 text-sm grid-cols-4 row-start-8 flex w-full relative '>
-                    <h1 className='col-span-1 p-2 flex items-center justify-center  text-[12px]' style={{wordSpacing:'6px'}}>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
+                    <h1 className='col-span-1 p-2 flex items-center justify-center  text-[12px] tracking-wider ' style={{wordSpacing:'6px'}}>SHELTON STREET COVENT GARDEN LONDON WC2H</h1>
                         
                 </div>
                   <div className=' z-10  row-start-5 col-span-full flex items-center justify-center  text-[14px] relative top-3'>
