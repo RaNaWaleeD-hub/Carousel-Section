@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTimer } from "react-timer-hook";
-import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar,buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { AiFillCaretLeft, AiFillCaretRight,AiOutlineHeart,AiFillHeart } from 'react-icons/ai';
 
@@ -50,7 +50,7 @@ const Card = ({ data }) => {
       return (
         <>
         <div className='flex flex-col'>
-            <div className=' mb-3 text-white card h-[430px]  grid  grid-cols-4 rounded-xl space-between p-4 ' style={{ backgroundImage: `url(${getImages[currentIndex]})` }}>
+            <div className=' mb-3 text-white card h-[430px]  grid  grid-cols-4 rounded-xl space-between p-4 box_shadow' style={{ backgroundImage:  `url(${getImages[currentIndex]})`  }}>
                 <div className='z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col items-center'>
                     <div className='text-5xl'>{days}</div>
                     <div className='text-xs'>DAYS</div>
@@ -109,15 +109,22 @@ const Card = ({ data }) => {
                 <div className='z-10'>
                                 <CircularProgressbar
                                     className='z-10 h-7 w-7 flex items-center justify-center text-white absolute bottom-[50px] left-[75px]'
-                                    styles={{
-                                        text: {
-                                            fontSize: '35px',
-                                            fill: 'white',
-                                        },
-                                        pathColor: `rgba(62, 152, 199, ${data.completion_percentage / 100})`,
-                                       
+                                    
+                                         
+                                         styles={buildStyles({
+                                            textColor: "white",
+                                            
+                                            
+                                            textSize: "35px",
+                                            
+                                            pathColor: "#6a8509",
+                                            
+                                            background:'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)'
+                                         })}
+                                      
+                                     
                                  
-                                    }}
+                              
                                     text={`${data.completion_percentage}%`}
                                    value={data.completion_percentage}
                                 />
@@ -130,7 +137,7 @@ const Card = ({ data }) => {
                 </div>
                 <div>
                     
-                   <h4 className='px-10 bg-black text-white rounded-2xl  flex items-center justify-between cursor-pointer '> BUY ENTRY NOW</h4>
+                   <h4 className=' bg-black text-white rounded-2xl  flex items-center justify-between cursor-pointer '> BUY ENTRY NOW</h4>
                     <p className='text-[10px] text-end'>#ZM786123456</p>
                 </div>
             </div>
