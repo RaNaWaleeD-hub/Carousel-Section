@@ -120,7 +120,7 @@ const Card = ({ data }) => {
                 </p>
                 <div className='z-10'>
                                 <CircularProgressbar
-                                    className='z-10 h-7 w-7 flex items-center justify-center text-white absolute bottom-[50px] left-[75px]'
+                                    className='z-10 h-7 w-7 flex items-center justify-center text-white absolute bottom-[58px] left-[75px]'
                                     
                                          
                                          styles={buildStyles({
@@ -143,8 +143,8 @@ const Card = ({ data }) => {
                             </div>
                </div>
             </div>
-         {/* <div className='z-10 flex items-center justify-center'>
-         <div className='flex items-center w-72 justify-center'>
+         <div className='z-10 flex items-center justify-center'>
+         <div className='flex items-center w-72 justify-center relative bottom-[65px]'>
              {
                   getImages.map((item, index) => {
                      return (
@@ -155,7 +155,7 @@ const Card = ({ data }) => {
                     })
              }
             </div>
-         </div> */}
+         </div>
                
             <div className=' px-5 py-2 bg-black text-white rounded-2xl  flex items-center justify-between cursor-pointer'>
                 <div>
