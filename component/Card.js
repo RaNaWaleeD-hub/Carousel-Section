@@ -44,13 +44,25 @@ const Card = ({ data }) => {
     const expiryTimestamp = new Date(data.expiry).getTime();
     const { seconds, minutes, hours,days } = useTimer({ expiryTimestamp });
     
-    
+    const Indicator = ({ indexValue, bgValue }) => {
+        const indicatorStyle = {
+            width: '40px',
+            height: '2.75px',
+            borderRadius: '20%',
+            backgroundColor: `${bgValue}`,
+            cursor: 'pointer',
+            margin: '0 4px',
+        };
+
+        return <div style={indicatorStyle} />;
+    };
+
 
 
       return (
         <>
-        <div className='flex flex-col'>
-            <div className=' mb-3 text-white card h-[430px]  grid  grid-cols-4 rounded-xl space-between p-4 box_shadow' style={{ backgroundImage:  `url(${getImages[currentIndex]})`  }}>
+        <div className='flex flex-col  '>
+            <div className=' mb-3 text-white card h-[430px]  grid  grid-cols-4 rounded-xl space-between p-4  ' style={{ backgroundImage:  `url(${getImages[currentIndex]})`    }}>
                 <div className='z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col items-center'>
                     <div className='text-5xl'>{days}</div>
                     <div className='text-xs'>DAYS</div>
@@ -92,12 +104,12 @@ const Card = ({ data }) => {
                   <h1 >United Kingdom</h1>
                   </div>
                 
-                <div className='relative top-8 col-span-full grid grid-cols-3 flex   justify-center mt-3'>
-                    <div class="col-span-1 flex justify-center items-center pr-10 relative bottom-3">
+                <div className='relative  top-8 col-span-full grid grid-cols-3 flex   justify-center mt-3'>
+                    <div class="z-10 col-span-1 flex justify-center items-center pr-10 relative bottom-3">
                         <img src="/static/zimologo.png" alt='' />
                     </div>
-                    <p className='col-span-1 flex items-center justify-center  relative bottom-5 '>£5,000,000 GBP</p>
-                    <div class="col-span-1 flex justify-center items-center pl-10 relative bottom-3">
+                    <p className=' z-10 col-span-1 text-white flex items-center justify-center  relative bottom-5 '>£5,000,000 GBP</p>
+                    <div class="z-10 col-span-1 flex justify-center items-center pl-10 relative bottom-3">
                         <img src="/static/bottomlogo.png" alt='' />
                     </div>
                    
@@ -117,7 +129,7 @@ const Card = ({ data }) => {
                                             
                                             textSize: "35px",
                                             
-                                            pathColor: "gold",
+                                            pathColor: "#BD9E56",
                                             
                                             background:'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)'
                                          })}
@@ -131,6 +143,20 @@ const Card = ({ data }) => {
                             </div>
                </div>
             </div>
+         {/* <div className='z-10 flex items-center justify-center'>
+         <div className='flex items-center w-72 justify-center'>
+             {
+                  getImages.map((item, index) => {
+                     return (
+                         <>
+                         <Indicator key={index} indexValue={currentIndex} bgValue={index === currentIndex ? 'white' : 'gray'} />
+                           </>
+                             )
+                    })
+             }
+            </div>
+         </div> */}
+               
             <div className=' px-5 py-2 bg-black text-white rounded-2xl  flex items-center justify-between cursor-pointer'>
                 <div>
                     <p>£ {data.price} {data.currency}</p>
