@@ -26,14 +26,14 @@ const Homepage = () => {
         slidesToScroll:4,
         responsive: [
             {
-              breakpoint: 1324,
+              breakpoint: 1535,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
               }
             },
             {
-                breakpoint: 1100,
+                breakpoint: 1150,
                 settings: {
                   slidesToShow: 2,
                   slidesToScroll: 2,
@@ -68,7 +68,7 @@ const Homepage = () => {
                             cardItem.map((item) => {
                                 return (
                                     <>
-                                        <div className='flex m-2 p-0 justify-center space-evenly overflow-hidden min-h-screen'>
+                                        <div className='flex m-2 p-0 justify-center space-evenly  min-h-screen'>
                                             <Card data={item} />
                                         </div>
                                     </>
