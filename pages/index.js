@@ -68,7 +68,7 @@ const Homepage = () => {
                             cardItem.map((item) => {
                                 return (
                                     <>
-                                        <div className='flex m-3 p-0 justify-center min-h-screen'>
+                                        <div className='flex m-2 p-0 justify-center space-evenly overflow-hidden min-h-screen'>
                                             <Card data={item} />
                                         </div>
                                     </>
